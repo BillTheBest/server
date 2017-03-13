@@ -1083,10 +1083,13 @@ span.ui-icon {
 	}
 
 	div.emptycontent {
-		margin-top: 25vh;
+		margin-top: 9vh !important;
 		margin-bottom: 5vh;
 		.icon-loading {
 			position: inherit;
+		}
+		.icon-search {
+			display: inline-block;
 		}
 	}
 
@@ -1137,7 +1140,7 @@ span.ui-icon {
 			}
 		}
 
-		.top-action, .other-actions {
+		.top-action, .second-action, .other-actions {
 			width: 16px;
 			height: 16px;
 			padding: 8px;
