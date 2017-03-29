@@ -129,10 +129,16 @@ class Server extends ServerContainer implements IServerContainer {
 		parent::__construct();
 		$this->webRoot = $webRoot;
 
+		$this->registerService(\OCP\IServerContainer::class, function(IServerContainer $c) {
+			return $c;
+		});
+
 		$this->registerAlias(\OCP\Contacts\IManager::class, \OC\ContactsManager::class);
 		$this->registerAlias('ContactsManager', \OCP\Contacts\IManager::class);
 
 		$this->registerAlias(IActionFactory::class, ActionFactory::class);
+
+
 
 		$this->registerService(\OCP\IPreview::class, function (Server $c) {
 			return new PreviewManager(

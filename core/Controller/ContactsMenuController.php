@@ -40,6 +40,7 @@ class ContactsMenuController extends Controller {
 	/**
 	 * @param IRequest $request
 	 * @param string $UserId
+	 * @param Manager $manager
 	 */
 	public function __construct(IRequest $request, $UserId, Manager $manager) {
 		parent::__construct('core', $request);
